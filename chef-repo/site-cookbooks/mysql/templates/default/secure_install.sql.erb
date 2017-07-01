@@ -1,0 +1,14 @@
+-- Drop Test databases
+DROP DATABASE IF EXISTS test;
+
+-- delete anonymous user
+DELETE FROM mysql.user WHERE user = '';
+
+-- set root user password
+SET PASSWORD FOR 'root'@'::1'                   = PASSWORD('<%= @root_password %>');
+SET PASSWORD FOR 'root'@'127.0.0.1'             = PASSWORD('<%= @root_password %>');
+SET PASSWORD FOR 'root'@'localhost'             = PASSWORD('<%= @root_password %>');
+SET PASSWORD FOR 'root'@'<%= @hostname %>' = PASSWORD('<%= @root_password %>');
+
+-- Apply privileges
+FLUSH PRIVILEGES;

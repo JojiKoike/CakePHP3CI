@@ -1,0 +1,53 @@
+DEPENDENCIES
+  capistrano
+    path: site-cookbooks/capistrano
+  common
+    path: site-cookbooks/common
+  hostsfile
+  java
+  jenkins (~> 5.0.2)
+  jenkinscustomize
+    path: site-cookbooks/jenkinscustomize
+  mysql
+    path: site-cookbooks/mysql
+  nginx
+    path: site-cookbooks/nginx
+  phpenv
+    path: site-cookbooks/phpenv
+  selinux
+  yum
+  yum-epel
+
+GRAPH
+  apt (6.1.2)
+  capistrano (0.1.0)
+  common (0.1.0)
+  compat_resource (12.19.0)
+  dpkg_autostart (0.2.0)
+  homebrew (4.2.0)
+  hostsfile (2.4.5)
+  java (1.50.0)
+    apt (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  jenkins (5.0.2)
+    compat_resource (>= 12.16.3)
+    dpkg_autostart (>= 0.0.0)
+    runit (>= 1.7)
+  jenkinscustomize (0.1.0)
+    jenkins (>= 0.0.0)
+  mysql (0.1.0)
+  nginx (0.1.0)
+  ohai (5.1.0)
+  packagecloud (0.3.0)
+  phpenv (0.1.0)
+    hostsfile (>= 0.0.0)
+  runit (3.0.5)
+    packagecloud (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  selinux (2.0.3)
+  windows (3.1.1)
+    ohai (>= 4.0.0)
+  yum (5.0.1)
+  yum-epel (2.1.2)
+    compat_resource (>= 12.16.3)
